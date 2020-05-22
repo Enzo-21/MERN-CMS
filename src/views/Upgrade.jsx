@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, { Component } from "react";
+import React from "react";
 
 // reactstrap components
 import {
@@ -32,8 +32,7 @@ import {
 // core components
 import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
-class Upgrade extends Component {
-  render() {
+const Upgrade = () => {
     return (
       <>
         <PanelHeader size="sm" />
@@ -146,6 +145,6 @@ class Upgrade extends Component {
       </>
     );
   }
-}
+
 
 export default Upgrade;

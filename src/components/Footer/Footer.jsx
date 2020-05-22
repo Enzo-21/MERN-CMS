@@ -42,23 +42,25 @@ class Footer extends React.Component {
             </ul>
           </nav>
           <div className="copyright">
-            &copy; {1900 + new Date().getYear()}, Designed by{" "}
+            &copy; {1900 + new Date().getYear()}, Coded by{" "}
             <a
-              href="https://www.invisionapp.com"
+              href="https://github.com/gerillanes7"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Invision
+              Germancito
             </a>
-            . Coded by{" "}
+            {" "}
+            y
+            {" "}
             <a
-              href="https://www.creative-tim.com?ref=nudr-footer"
+              href="https://github.com/Enzo-21"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Creative Tim
+              Encito
             </a>
-            .
+            
           </div>
         </Container>
       </footer>

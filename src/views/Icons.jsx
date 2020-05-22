@@ -9,8 +9,8 @@ import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
 import icons from "variables/icons";
 
-class Icons extends React.Component {
-  render() {
+const Icons = () => {
+  
     return (
       <>
         <PanelHeader size="sm" />
@@ -52,7 +52,7 @@ class Icons extends React.Component {
         </div>
       </>
     );
-  }
+  
 }
 
 export default Icons;
