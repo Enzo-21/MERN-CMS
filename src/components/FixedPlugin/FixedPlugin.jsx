@@ -1,21 +1,3 @@
-/*!
-
-=========================================================
-* Now UI Dashboard React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-/*eslint-disable*/
 import React, { Component } from "react";
 
 class FixedPlugin extends Component {
@@ -100,29 +82,6 @@ class FixedPlugin extends Component {
                   }}
                 />
               </div>
-            </li>
-
-            <li className="button-container">
-              <a
-                href="https://www.creative-tim.com/product/now-ui-dashboard-pro-react?ref=nudr-fixed-plugin"
-                target="_blank"
-                className="btn btn-primary btn-block btn-round"
-              >
-                Buy pro
-              </a>
-              <a
-                href="https://www.creative-tim.com/product/now-ui-dashboard-react?ref=nudr-fixed-plugin"
-                target="_blank"
-                className="btn btn-warning btn-block btn-round"
-              >
-                Download free
-              </a>
-              <a
-                href="https://demos.creative-tim.com/now-ui-dashboard-react/#/documentation/tutorial?ref=nudr-fixed-plugin"
-                className="btn btn-block btn-round btn-info"
-              >
-                Documentation
-              </a>
             </li>
           </ul>
         </div>

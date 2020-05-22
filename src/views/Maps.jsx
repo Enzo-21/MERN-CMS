@@ -1,22 +1,5 @@
-/*!
-
-=========================================================
-* Now UI Dashboard React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
-// react plugin used to create google maps
+
 import {
   withScriptjs,
   withGoogleMap,
@@ -24,10 +7,10 @@ import {
   Marker
 } from "react-google-maps";
 
-// reactstrap components
+
 import { Row, Col, Card, CardHeader, CardBody } from "reactstrap";
 
-// core components
+
 import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
 const MapWrapper = withScriptjs(
@@ -118,37 +101,36 @@ const MapWrapper = withScriptjs(
   ))
 );
 
-class FullScreenMap extends React.Component {
-  render() {
-    return (
-      <>
-        <PanelHeader size="sm" />
-        <div className="content">
-          <Row>
-            <Col xs={12}>
-              <Card>
-                <CardHeader>Google Maps</CardHeader>
-                <CardBody>
-                  <div
-                    id="map"
-                    className="map"
-                    style={{ position: "relative", overflow: "hidden" }}
-                  >
-                    <MapWrapper
-                      googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
-                      loadingElement={<div style={{ height: `100%` }} />}
-                      containerElement={<div style={{ height: `100%` }} />}
-                      mapElement={<div style={{ height: `100%` }} />}
-                    />
-                  </div>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-        </div>
-      </>
-    );
-  }
+
+const FullScreenMap = () => {
+  return (
+    <>
+    <PanelHeader size="sm" />
+    <div className="content">
+      <Row>
+        <Col xs={12}>
+          <Card>
+            <CardHeader>Google Maps</CardHeader>
+            <CardBody>
+              <div
+                id="map"
+                className="map"
+                style={{ position: "relative", overflow: "hidden" }}
+              >
+                <MapWrapper
+                  googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
+                  loadingElement={<div style={{ height: `100%` }} />}
+                  containerElement={<div style={{ height: `100%` }} />}
+                  mapElement={<div style={{ height: `100%` }} />}
+                />
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
+    </div>
+  </>
+  )
 }
 
 export default FullScreenMap;

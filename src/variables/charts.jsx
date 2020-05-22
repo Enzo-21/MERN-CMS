@@ -1,23 +1,3 @@
-/*!
-
-=========================================================
-* Now UI Dashboard React - v1.2.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-dashboard-react
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-// ##############################
-// // // Function that converts a hex color number to a RGB color number
-// #############################
 function hexToRGB(hex, alpha) {
   var r = parseInt(hex.slice(1, 3), 16),
     g = parseInt(hex.slice(3, 5), 16),
@@ -30,13 +10,9 @@ function hexToRGB(hex, alpha) {
   }
 }
 
-// ##############################
-// // // general variables for charts
-// #############################
 
 const chartColor = "#FFFFFF";
 
-// General configuration for the charts with Line gradientStroke
 const gradientChartOptionsConfiguration = {
   maintainAspectRatio: false,
   legend: {
@@ -135,10 +111,8 @@ var gradientChartOptionsConfigurationWithNumbersAndGrid = {
   }
 };
 
-// ##############################
-// // // Dashboard view - Panel chart
-// #############################
 
+// // // Dashboard view - Panel chart
 const dashboardPanelChart = {
   data: canvas => {
     const ctx = canvas.getContext("2d");
@@ -246,10 +220,8 @@ const dashboardPanelChart = {
   }
 };
 
-// ##############################
-// // // Dashboard view - Shipped Products - Card
-// #############################
 
+// // // Dashboard view - Shipped Products - Card
 const dashboardShippedProductsChart = {
   data: canvas => {
     var ctx = canvas.getContext("2d");
@@ -295,10 +267,7 @@ const dashboardShippedProductsChart = {
   options: gradientChartOptionsConfiguration
 };
 
-// ##############################
 // // // Dashboard view - All Products - Card
-// #############################
-
 const dashboardAllProductsChart = {
   data: canvas => {
     var ctx = canvas.getContext("2d");
@@ -331,10 +300,7 @@ const dashboardAllProductsChart = {
   options: gradientChartOptionsConfigurationWithNumbersAndGrid
 };
 
-// ##############################
 // // // Dashboard view - Bar Chart - Card
-// #############################
-
 const dashboard24HoursPerformanceChart = {
   data: canvas => {
     var ctx = canvas.getContext("2d");
