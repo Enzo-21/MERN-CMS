@@ -16,8 +16,7 @@ import {
 
 import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
-class User extends React.Component {
-  render() {
+const User = () => {
     return (
       <>
         <PanelHeader size="sm" />
@@ -202,6 +201,6 @@ class User extends React.Component {
       </>
     );
   }
-}
+
 
 export default User;

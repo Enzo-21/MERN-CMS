@@ -1,6 +1,5 @@
-import React, { Component } from "react";
 
-
+import React from "react";
 import {
   Table,
   Row,
@@ -15,8 +14,7 @@ import {
 
 import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
-class Upgrade extends Component {
-  render() {
+const Upgrade = () => {
     return (
       <>
         <PanelHeader size="sm" />
@@ -129,6 +127,6 @@ class Upgrade extends Component {
       </>
     );
   }
-}
+
 
 export default Upgrade;

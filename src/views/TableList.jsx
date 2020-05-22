@@ -16,8 +16,7 @@ import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
 import { thead, tbody } from "variables/general";
 
-class RegularTables extends React.Component {
-  render() {
+const RegularTables = () => {
     return (
       <>
         <PanelHeader size="sm" />
@@ -111,6 +110,6 @@ class RegularTables extends React.Component {
       </>
     );
   }
-}
+
 
 export default RegularTables;

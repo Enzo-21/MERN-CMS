@@ -31,8 +31,8 @@ import {
   dashboard24HoursPerformanceChart
 } from "variables/charts.jsx";
 
-class Dashboard extends React.Component {
-  render() {
+const Dashboard = () =>{
+  
     return (
       <>
         <PanelHeader
@@ -358,6 +358,6 @@ class Dashboard extends React.Component {
       </>
     );
   }
-}
+
 
 export default Dashboard;
