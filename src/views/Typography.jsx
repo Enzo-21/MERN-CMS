@@ -23,8 +23,7 @@ import { Card, CardHeader, CardBody, Row, Col } from "reactstrap";
 // core components
 import PanelHeader from "components/PanelHeader/PanelHeader.jsx";
 
-class Typography extends React.Component {
-  render() {
+const Typography = () =>{
     return (
       <>
         <PanelHeader size="sm" />
@@ -152,6 +151,6 @@ class Typography extends React.Component {
       </>
     );
   }
-}
+
 
 export default Typography;
