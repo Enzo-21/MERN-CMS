@@ -1,0 +1,25 @@
+form.register-form {
+    background-color: rgba(255, 255, 255, 0.123);
+    padding: 1;
+    max-width: 700px;
+    margin: 2rem auto;
+    
+    button {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 1.2rem auto;
+    }
+    h1, span {
+        color: white;
+    }
+    .remember {
+       text-align: center;
+    }
+  
+    svg {
+        color: rgb(187, 187, 187);
+        &:hover {
+            color:  rgb(231, 137, 137);
+        }
+    }
+}

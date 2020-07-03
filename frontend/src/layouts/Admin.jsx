@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import PerfectScrollbar from "perfect-scrollbar";
 
@@ -9,48 +9,49 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import DemoNavbar from "components/Navbars/DemoNavbar.jsx";
 import Footer from "components/Footer/Footer.jsx";
 import Sidebar from "components/Sidebar/Sidebar.jsx";
-import FixedPlugin from "components/FixedPlugin/FixedPlugin.jsx";
+//import FixedPlugin from "components/FixedPlugin/FixedPlugin.jsx";
 
 import routes from "routes.js";
+import { createRef } from "react";
+import { connect } from "react-redux";
+import PropTypes from 'prop-types'
 
 var ps;
 
-class Dashboard extends React.Component {
-  state = {
-    backgroundColor: "blue"
-  };
-  mainPanel = React.createRef();
-  componentDidMount() {
+
+
+const Dashboard = (props) => {
+
+  const { isAuthenticated, loading } = props
+  const [backgroundColor] = useState('blue')
+  const mainPanel = createRef();
+
+  useEffect(() => {
     if (navigator.platform.indexOf("Win") > -1) {
       ps = new PerfectScrollbar(this.mainPanel.current);
       document.body.classList.toggle("perfect-scrollbar-on");
     }
-  }
-  componentWillUnmount() {
+
     if (navigator.platform.indexOf("Win") > -1) {
       ps.destroy();
       document.body.classList.toggle("perfect-scrollbar-on");
     }
-  }
-  componentDidUpdate(e) {
-    if (e.history.action === "PUSH") {
-      this.mainPanel.current.scrollTop = 0;
-      document.scrollingElement.scrollTop = 0;
-    }
-  }
-  handleColorClick = color => {
-    this.setState({ backgroundColor: color });
-  };
-  render() {
+
+  }, [])
+
+
+  if (!isAuthenticated && !loading) {
+   return <Redirect to='/login' />
+  } else {
     return (
       <div className="wrapper">
         <Sidebar
-          {...this.props}
+          {...props}
           routes={routes}
-          backgroundColor={this.state.backgroundColor}
+          backgroundColor={backgroundColor}
         />
-        <div className="main-panel" ref={this.mainPanel}>
-          <DemoNavbar {...this.props} />
+        <div className="main-panel" ref={mainPanel}>
+          <DemoNavbar {...props} />
           <Switch>
             {routes.map((prop, key) => {
               return (
@@ -65,13 +66,27 @@ class Dashboard extends React.Component {
           </Switch>
           <Footer fluid />
         </div>
-        <FixedPlugin
-          bgColor={this.state.backgroundColor}
-          handleColorClick={this.handleColorClick}
-        />
+        {/* <FixedPlugin
+          bgColor={backgroundColor}
+        /> */}
       </div>
     );
   }
+
+
+
+
+
 }
 
-export default Dashboard;
+Dashboard.propTypes = {
+  isAuthenticated: PropTypes.bool,
+  loading: PropTypes.bool.isRequired,
+}
+
+const mapStateToProps = state => ({
+  isAuthenticated: state.authReducer.isAuthenticated,
+  loading: state.authReducer.loading
+})
+
+export default connect(mapStateToProps)(Dashboard);
